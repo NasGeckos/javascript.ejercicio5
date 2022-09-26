@@ -1,0 +1,40 @@
+// Ejercicio 05
+
+//Lista de compra supermercado
+
+const listaCompra = ["azucar", "sal", "leche", "huevos", "pan"]
+console.log(listaCompra)
+
+listaCompra.push("Aceite Girasol")
+console.log(listaCompra)
+
+listaCompra.pop()
+console.log(listaCompra)
+
+// Lista de Peliculas
+
+const listaPeliculas = [
+    { nombre: "Gladiador", director: "Ridley Scott", fecha: 2000 },
+    { nombre: "Prometheus", director: "Ridley Scott", fecha: 2012 },
+    { nombre: "El último samurái", director: "Edward Zwick", fecha: 2003 },
+]
+
+const after2010 = listaPeliculas.filter(fecha => fecha.fecha > 2010)
+console.log(after2010)
+
+// .map()
+
+const directores = listaPeliculas.map(function(element, indice) {return `${indice +1} - ${element.director}`})
+console.log (directores)
+
+const titulos = listaPeliculas.map(function(element, indice){return `${indice +1} - ${element.nombre}`})
+console.log (titulos)
+
+// .concat()
+
+console.log(directores.concat(titulos))
+
+// Factor de propagación
+
+const nuevaLista = [...directores, ...titulos]
+console.log(nuevaLista)
